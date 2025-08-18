@@ -14,16 +14,16 @@ Multiple commits are included to reflect incremental development.
 ## Doppler Integration
 
 ### Config Syncs
-![Config Syncs in Doppler](all_progra_web/evidence/conexiondoppler.png)
+![Config Syncs in Doppler](evidence/conexiondoppler.png)
 
 ### Doppler Variables
-![Doppler variables](all_progra_web/evidence/secrets.png)
+![Doppler variables](evidence/secrets.png)
 
 ---
 
 ## GitHub Secrets
 
-![GitHub secrets](all_progra_web/evidence/secretsgit.png)
+![GitHub secrets](evidence/secretsgit.png)
 
 ---
 
@@ -31,7 +31,7 @@ Multiple commits are included to reflect incremental development.
 
 The application displays Pokémon cards using React and the PokéAPI.
 
-![Application screenshot](all_progra_web/evidence/application.png)
+![Application screenshot](evidence/application.png)
 
 ---
 
@@ -39,7 +39,7 @@ The application displays Pokémon cards using React and the PokéAPI.
 
 Access the app via the CloudFront CDN:
 
-[https://your-distribution.cloudfront.net](https://your-distribution.cloudfront.net)
+[https://your-distribution.cloudfront.net](https://dl8jjud541vp4.cloudfront.net/)
 
 ---
 
