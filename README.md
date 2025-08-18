@@ -1,12 +1,50 @@
-# React + Vite
+# Assessment 1 - Pokémon App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the application developed for **Assessment 1**. The app displays Pokémon cards fetched from the PokéAPI and is deployed using AWS S3 + CloudFront.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Branch
 
-## Expanding the ESLint configuration
+The branch used for this submission is: **`assessment-1`**, created from **`main`**.  
+Multiple commits are included to reflect incremental development.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Doppler Integration
+
+### Config Syncs
+![Config Syncs in Doppler](all_progra_web/evidence/conexiondoppler.png)
+
+### Doppler Variables
+![Doppler variables](all_progra_web/evidence/secrets.png)
+
+---
+
+## GitHub Secrets
+
+![GitHub secrets](all_progra_web/evidence/secretsgit.png)
+
+---
+
+## Application
+
+The application displays Pokémon cards using React and the PokéAPI.
+
+![Application screenshot](all_progra_web/evidence/application.png)
+
+---
+
+## Public URL
+
+Access the app via the CloudFront CDN:
+
+[https://your-distribution.cloudfront.net](https://your-distribution.cloudfront.net)
+
+---
+
+## Notes
+
+- The application was deployed on AWS S3 and distributed through CloudFront.  
+- Doppler was used for secret and environment variable management.  
+- All commits reflect the incremental development of the project.
