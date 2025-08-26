@@ -6,26 +6,28 @@ function Counter() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Formulario enviado!');
+    alert('Tarea agregada');
     setShowForm(false);
   };
 
   return (
     <>
-      <p>Has hecho click {count} veces</p>
-      <button onClick={() => setCount(count + 1)}>Sumar</button>
-      <button onClick={() => setShowForm(true)}>Abrir Formulario</button>
+      <button onClick={() => setShowForm(true)}>Agregar Task</button>
 
       {showForm && (
         <div className="overlay">
           <div className="messagebox">
-            <h2>Formulario</h2>
+            <h2>Agrega tu tarea</h2>
             <form onSubmit={handleSubmit}>
-              <label htmlFor="name">Nombre:</label>
-              <input type="text" id="name" name="name" required />
+                <label htmlFor="name">Nombre de la tarea :</label>
+                <input type="text" id="name" name="name" required />
 
-              <label htmlFor="email">Email:</label>
-              <input type="email" id="email" name="email" required />
+                <label for="options">  Elige el estado: </label>
+                <select id="options" name="options">
+                    <option value="0">Sin empezar</option>
+                    <option value="1">En curso</option>
+                    <option value="2">listo</option>
+                </select>
 
               <div className="buttons">
                 <button type="submit">Enviar</button>

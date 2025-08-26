@@ -1,42 +1,43 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #af4747;
   margin: 0;
   padding: 20px;
-  text-align: center;
+  background: #f4f4f4;
 }
 
-h1 {
-  color: #ffffff;
+h2 {
+  text-align: center;
   margin-bottom: 20px;
 }
 
-/* Grid de la galería */
-.galeria {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 15px;
-  max-width: 900px;
-  margin: 0 auto;
+/* Contenedor principal en flex */
+.kanban {
+  display: flex;
+  gap: 20px;              /* espacio entre columnas */
+  justify-content: center; /* centra horizontalmente */
 }
 
-/* Tarjeta de Pokémon */
-.pokemon-card {
-  background-color: #293883;
-  border-radius: 10px;
+/* Columnas */
+.column {
+  background: #fff;
+  flex: 1;                  /* que todas midan lo mismo */
+  min-width: 250px;         /* ancho mínimo */
+  border-radius: 8px;
   padding: 10px;
-  color: #ffffff;
-
-  box-shadow: 0 4px 8px rgb(255, 255, 255);
-  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;   /* tareas en columna */
 }
 
-.pokemon-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgb(255, 255, 255);
+.column h3 {
+  text-align: center;
+  margin-bottom: 10px;
 }
 
-.pokemon-card img {
-  width: 100px;
-  height: 100px;
+/* Tarjetas */
+.task {
+  background: #e3e3e3;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
 }
