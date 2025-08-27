@@ -16,12 +16,11 @@ function Counter({ texto, changeTaskStatus, oldStatus }) {
     return (
         <>
             <p>{texto}</p>
-            <button onClick={() => setShowForm(true)}>Agregar Task</button>
+            <button onClick={() => setShowForm(true)}>Cambiar prioridad</button>
 
             {showForm && (
                 <div className="overlay">
                     <div className="messagebox">
-                        <h2>Cambia la prioridad de la tarea</h2>
                         <form onSubmit={handleSubmit}>
                             <label htmlFor="options">Elige el estado:</label>
                             <select
