@@ -1,12 +1,16 @@
-# React + Vite
+#  what and whuy I created this hooks: 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+useState: Manages local component state.
 
-Currently, two official plugins are available:
+In Counter: Tracks if the form is visible (showForm) and the selected new status (taskId).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+In Generate_task: Tracks the form visibility (showForm), the new task's name (taskName), and its initial status (taskId).
 
-## Expanding the ESLint configuration
+In Reloj: Holds the current time value (hora).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+useEffect in Reloj: Handles side effects. This one sets up a timer (setInterval) to update the clock every second when the component loads. Its cleanup function (clearInterval) stops the timer when the component is removed, preventing memory leaks.
+
+Lifted State (via Props): This is how Counter and Generate_task communicate with the parent board component. They don't hold the task list themselves. Instead, they call functions like changeTaskStatus and onAddTask (passed down as props) to tell the parent to update the central state, which then trickles down to all components.
+
+#  URL OF CDN
+## https://your-distribution.cloudfront.net
