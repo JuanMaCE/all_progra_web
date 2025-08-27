@@ -7,7 +7,7 @@ function Reloj() {
         const id = setInterval(() => setHora(new Date()), 1000);
         return () => clearInterval(id);
     }, []);
-    return <h2>{hora.toLocaleTimeString()}</h2>
+    return <h2>{hora.toLocaleTimeString()} por Juan Marcos </h2>
 }
 
 
