@@ -1,33 +1,65 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
-import Counter from "./Cpunter";
 import Reloj from "./Clock";
 import Generate_task from "./generate_task";
 
+import "./index.css";
+
+function App() {
+  const [list_por_hacer, setTasks_hacer] = useState([]);
+  const [list_por_progreso, setTasks_progreso] = useState([]);
+  const [list_por_hecho, setTasks_hecho] = useState([]);
+
+  const addTask = (newTask, status) => {
+    if (status === 0) {
+      setTasks_hacer([...list_por_hacer, newTask]);
+      console.log(newTask, status);
+    }
+    else if (status === 1) {
+      setTasks_progreso([...list_por_hacer, newTask]);
+      console.log(newTask, status);
+    } else if (status === 2) {
+      setTasks_hecho([...list_por_hacer, newTask]);
+      console.log(newTask, status);
+    }
+  };
+
+  
 
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <Reloj />
-    <Generate_task onCountChange />
+  return (
     <>
-      <h2>Kanban con Flexbox</h2>
+      <Reloj />
+      <Generate_task onAddTask={addTask} /> {}
       <div className="kanban">
-        <div className="column">
+
+        <div id="porHacer" className="column">
           <h3>Por hacer</h3>
-          <div className="task">Tarea 1</div>
-          <div className="task">Tarea 2</div>
+          {list_por_hacer.map((task, index) => (
+            <div key={index} className="task">{task}</div>
+          ))}
         </div>
-        <div className="column">
+
+        <div id="enProgreso" className="column">
           <h3>En progreso</h3>
-          <div className="task">Tarea 3</div>
+          {list_por_progreso.map((task, index) => (
+            <div key={index} className="task">{task}</div>
+          ))}
         </div>
-        <div className="column">
+
+        <div id="hecho" className="column">
           <h3>Hecho</h3>
-          <div className="task">Tarea 4</div>
+            {list_por_hecho.map((task, index) => (
+            <div key={index} className="task">{task}</div>
+          ))}
         </div>
       </div>
     </>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <App />
   </React.StrictMode>
 );
