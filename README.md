@@ -13,4 +13,4 @@ useEffect in Reloj: Handles side effects. This one sets up a timer (setInterval)
 Lifted State (via Props): This is how Counter and Generate_task communicate with the parent board component. They don't hold the task list themselves. Instead, they call functions like changeTaskStatus and onAddTask (passed down as props) to tell the parent to update the central state, which then trickles down to all components.
 
 #  URL OF CDN
-## https://your-distribution.cloudfront.net
+## https://dl8jjud541vp4.cloudfront.net/
