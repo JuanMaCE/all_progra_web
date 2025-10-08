@@ -1,16 +1,30 @@
-# Django Project - Migrations (Homework hw-05)
+# Django Project with Docker + SQLite
 
-This project demonstrates the use of migrations in Django.
+This project demonstrates how to containerize a Django application using Docker with a local SQLite database.
 
-## Models and Relationships
-- Author → Book → Chapter → Page
+## Prerequisites
 
-## Database Diagram
-![Diagram](docs/diagrama.png)
+- Docker Desktop installed on Windows
+- WSL 2 enabled and integrated with Docker Desktop
+- Basic knowledge of Django
 
-## Migrations
-Each model was added in separate migrations:
-- 0001: Author  
-- 0002: Book  
-- 0003: Chapter  
-- 0004: Page  
+## Branch
+
+- Create and use the branch `hw-06` for this homework:
+```bash
+git checkout main
+git pull
+git checkout -b hw-06
+
+How to Run
+Build the Docker image:
+docker compose build
+Start the container:
+docker compose up
+Access the application:
+
+Open your browser and go to: http://localhost:8000
+
+Stop the container:
+
+docker compose down
