@@ -8,7 +8,7 @@ import json
 
 r = redis.Redis(host="localhost", port=6379, decode_responses=True)
 
-
+@csrf_exempt
 def hide_secret(request):
     if request.method == "POST":
         data = json.loads(request.body.decode("utf-8")).get("secret")
